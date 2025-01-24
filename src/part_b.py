@@ -1,6 +1,5 @@
 import numpy as np
 import scipy.sparse as sp
-import matplotlib.pyplot as plt
 
 def compute_degree_distribution(adj_matrix):
     """
@@ -29,17 +28,6 @@ def compute_degree_distribution(adj_matrix):
     log_degrees = np.log(unique_degrees)
     log_counts = np.log(degree_counts)
     slope, intercept = np.polyfit(log_degrees, log_counts, 1)
-    
-    # Plot the degree distribution in log-log scale
-    plt.figure(figsize=(8, 6))
-    plt.scatter(log_degrees, log_counts, label="Data (Log-Log)", alpha=0.7)
-    plt.plot(log_degrees, slope * log_degrees + intercept, color="red", label=f"Fit: slope={slope:.2f}")
-    plt.xlabel("Log(Degree)")
-    plt.ylabel("Log(Frequency)")
-    plt.title("Degree Distribution (Log-Log)")
-    plt.legend()
-    plt.grid(True, which="both", linestyle="--", linewidth=0.5)
-    plt.show()
     
     return {
         'degrees': unique_degrees,

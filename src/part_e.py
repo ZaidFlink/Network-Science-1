@@ -1,5 +1,4 @@
 import numpy as np
-import matplotlib.pyplot as plt
 import scipy.sparse
 
 def compute_eigenspectrum(adj_matrix, k=100):
@@ -25,17 +24,4 @@ def compute_eigenspectrum(adj_matrix, k=100):
     # Compute spectral gap (difference between largest and second-largest eigenvalues)
     spectral_gap = eigenvalues[0] - eigenvalues[1]
 
-    # Plot the first 100 eigenvalues (log scale to capture wide ranges, if needed)
-    plt.figure(figsize=(8, 6))
-    plt.plot(eigenvalues[:100], marker='o', linestyle='-', label="Eigenvalues")
-    plt.xlabel("Index")
-    plt.ylabel("Eigenvalue")
-    plt.title("Top 100 Eigenvalues of the Adjacency Matrix")
-    plt.grid(True, which="both", linestyle="--", linewidth=0.5)
-    plt.legend()
-    plt.show()
-
-    return {
-        'eigenvalues': eigenvalues[:100],
-        'spectral_gap': spectral_gap
-    }
+    return eigenvalues, spectral_gap

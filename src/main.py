@@ -23,10 +23,14 @@ def analyze_graph(adj_matrix, graph_name):
     properties['degree_dist'] = compute_degree_distribution(adj_matrix)
     
     # Shortest paths (part c)
-    properties['shortest_paths'] = compute_shortest_paths(adj_matrix)
+    shortest_paths = compute_shortest_paths(adj_matrix)
+    properties['shortest_paths'] = shortest_paths['paths']
+    properties['average_path_length'] = shortest_paths['average_path_length']
     
     # Clustering coefficients (part d)
-    properties['clustering_coeffs'] = compute_clustering_coefficients(adj_matrix)
+    clustering = compute_clustering_coefficients(adj_matrix)
+    properties['clustering_coeffs'] = clustering['coefficients']
+    properties['average_clustering'] = clustering['average_coefficient']
     
     # Eigenspectrum (part e)
     properties['eigenvalues'], properties['spectral_gap'] = compute_eigenspectrum(adj_matrix)
@@ -69,7 +73,8 @@ def main():
         print(f"Components: {properties['n_components']}")
         print(f"Giant component size: {properties['giant_size']}")
         print(f"Power law exponent: {properties['degree_dist']['slope']:.2f}")
-        print(f"Average clustering: {np.mean(properties['clustering_coeffs']):.2f}")
+        print(f"Average clustering: {properties['average_clustering']:.2f}")
+        print(f"Average path length: {properties['average_path_length']:.2f}")
         print(f"Spectral gap: {properties['spectral_gap']:.2f}")
         print(f"Degree correlation: {properties['degree_corr'][2]:.2f}")
     
@@ -88,7 +93,8 @@ def main():
         print(f"Components: {ba_properties['n_components']}")
         print(f"Giant component size: {ba_properties['giant_size']}")
         print(f"Power law exponent: {ba_properties['degree_dist']['slope']:.2f}")
-        print(f"Average clustering: {np.mean(ba_properties['clustering_coeffs']):.2f}")
+        print(f"Average clustering: {ba_properties['average_clustering']:.2f}")
+        print(f"Average path length: {ba_properties['average_path_length']:.2f}")
         print(f"Spectral gap: {ba_properties['spectral_gap']:.2f}")
         print(f"Degree correlation: {ba_properties['degree_corr'][2]:.2f}")
 

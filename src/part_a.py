@@ -2,18 +2,15 @@ import numpy as np
 import scipy.sparse as sp
 from scipy.sparse.csgraph import connected_components
 
-def analyze_basic_properties(file_path):
+def analyze_basic_properties(adj_matrix):
     """
     Compute basic network properties (part a):
     - node/edge sizes
     - number of connected components
     - size of the giant/largest connected component
     """
-    # Load adjacency matrix from a file
-    dense_adj_matrix = np.loadtxt(file_path)
-    
-    # Convert dense matrix to sparse CSC matrix
-    adj_matrix = sp.csc_matrix(dense_adj_matrix)
+    # Convert to sparse CSC matrix if not already
+    adj_matrix = sp.csc_matrix(adj_matrix)
     
     n_nodes = adj_matrix.shape[0]
     n_edges = int(adj_matrix.sum() / 2)  # Divide by 2 as matrix is symmetric
