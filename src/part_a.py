@@ -9,6 +9,9 @@ def analyze_basic_properties(adj_matrix):
     - number of connected components
     - size of the giant/largest connected component
     """
+    # Convert to sparse CSC matrix if not already
+    adj_matrix = sp.csc_matrix(adj_matrix)
+    
     n_nodes = adj_matrix.shape[0]
     n_edges = int(adj_matrix.sum() / 2)  # Divide by 2 as matrix is symmetric
     
@@ -24,4 +27,4 @@ def analyze_basic_properties(adj_matrix):
         'edges': n_edges,
         'n_components': n_components,
         'giant_size': giant_size
-    } 
+    }

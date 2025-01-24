@@ -1,2 +1,24 @@
-networks/
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Generated results
+results/
+*.png
+
+# Data files
+data/
+
+# Virtual environment
 venv/
+env/
+ENV/
+
+# IDE settings
+.vscode/
+.idea/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
