@@ -64,3 +64,18 @@ Graph: phonecalls.edgelist.txt
 
 
 **part 5**
+
+Graph: email.edgelist.txt
+  - Spectral gap: 38.24
+--------------------------------------------------
+Computing the top 100 eigenvalues for protein.edgelist.txt...
+Graph: protein.edgelist.txt
+  - Spectral gap: 3.65
+--------------------------------------------------
+Computing the top 100 eigenvalues for phonecalls.edgelist.txt...
+Graph: phonecalls.edgelist.txt
+  - Spectral gap: 4.84
+--------------------------------------------------
+
+**part 6**
+
