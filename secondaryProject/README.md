@@ -64,7 +64,7 @@ Graph: phonecalls.edgelist.txt
 
 
 **part 5**
-
+Computing the top 100 eigenvalues for protein.edgelist.txt...
 Graph: email.edgelist.txt
   - Spectral gap: 38.24
 --------------------------------------------------
@@ -79,3 +79,14 @@ Graph: phonecalls.edgelist.txt
 
 **part 6**
 
+2025-01-23 20:29:30.564 Python[5044:16013211] +[IMKInputSession subclass]: chose IMKInputSession_Modern
+Graph: email.edgelist.txt
+  - Degree correlation: -0.08
+--------------------------------------------------
+Graph: protein.edgelist.txt
+  - Degree correlation: -0.08
+--------------------------------------------------
+Graph: phonecalls.edgelist.txt
+  - Degree correlation: 0.21
+
+  **part 7**
