@@ -35,3 +35,16 @@ Graph: phonecalls.edgelist.txt
   - Power-law slope: -3.15
 
 **part 3**
+
+Graph: email.edgelist.txt
+  - Average shortest path length: 3.93
+--------------------------------------------------
+Computing shortest paths for protein.edgelist.txt (sampling 1000 nodes)...
+Graph: protein.edgelist.txt
+  - Average shortest path length: 5.55
+--------------------------------------------------
+Computing shortest paths for phonecalls.edgelist.txt (sampling 1000 nodes)...
+Graph: phonecalls.edgelist.txt
+  - Average shortest path length: 10.08
+--------------------------------------------------
+
