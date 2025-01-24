@@ -1,5 +1,8 @@
 results from basic_graph_properties.py:
 
+Here we completed the assignment using networkx to compare our results with the results using networkx. 
+In this file, we have the outputs using networkx. Although we see minute differences in the results, this is due to the sampling of nodes which is not the same everytime we run, and we used 1000 samples instead of 5000 and we still saw very similar results for all the parts. Indicating to us that the results are very stable and our implementation is correct.
+
 **Results**
 
 **part 1**
@@ -100,3 +103,47 @@ Graph: protein.edgelist.txt
 Graph: phonecalls.edgelist.txt
   - Average clustering coefficient: 0.14
 --------------------------------------------------
+
+
+
+**Question 3:**
+
+Analyzing email network...
+Generating Barabási-Albert graph for email (nodes=57194, edges per new node=10)...
+email - Nodes: 57194, Edges: 571840
+  - Number of connected components: 1
+  - Size of largest connected component: 57194
+  - Power-law slope: -2.11
+  Computing shortest paths (sampling 1000 nodes)...
+  - Average shortest path length: 3.49
+  Computing clustering coefficients...
+  - Average clustering coefficient: 0.0029
+  Computing 100 largest eigenvalues...
+  - Spectral gap: 22.52
+
+Analyzing protein network...
+Generating Barabási-Albert graph for protein (nodes=2018, edges per new node=5)...
+protein - Nodes: 2018, Edges: 10065
+  - Number of connected components: 1
+  - Size of largest connected component: 2018
+  - Power-law slope: -1.95
+  Computing shortest paths (sampling 1000 nodes)...
+  - Average shortest path length: 3.19
+  Computing clustering coefficients...
+  - Average clustering coefficient: 0.0260
+  Computing 100 largest eigenvalues...
+  - Spectral gap: 9.71
+
+Analyzing phonecalls network...
+Generating Barabási-Albert graph for phonecalls (nodes=36595, edges per new node=8)...
+phonecalls - Nodes: 36595, Edges: 292696
+  - Number of connected components: 1
+  - Size of largest connected component: 36595
+  - Power-law slope: -2.10
+  Computing shortest paths (sampling 1000 nodes)...
+  - Average shortest path length: 3.57
+  Computing clustering coefficients...
+  - Average clustering coefficient: 0.0035
+  Computing 100 largest eigenvalues...
+  - Spectral gap: 18.62
+
