@@ -5,12 +5,7 @@ import scipy.stats as pearsonr
 import os
 
 data_dir = "./secondaryProject/data/cleaned"
-reports_dir = "./secondaryProject/reports"
 files = ["email.edgelist.txt", "protein.edgelist.txt", "phonecalls.edgelist.txt"]
-
-# Create reports directory if it doesn't exist
-if not os.path.exists(reports_dir):
-    os.makedirs(reports_dir)
 
 def analyze_degree_correlation(filename, sample_size=5000):
     G = nx.read_edgelist(os.path.join(data_dir, filename), nodetype=int)
@@ -46,7 +41,7 @@ def analyze_degree_correlation(filename, sample_size=5000):
     plt.title(f"Degree Correlation - {filename}")
     plt.legend()
     plt.grid(True)
-    plt.savefig(os.path.join(reports_dir, f"{filename}_degree_correlation.png"))
+    plt.savefig(f"./secondaryProject/reports/{filename}_degree_correlation.png")
     plt.show()
     
     print(f"Graph: {filename}")

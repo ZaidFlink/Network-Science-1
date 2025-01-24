@@ -90,3 +90,13 @@ Graph: phonecalls.edgelist.txt
   - Degree correlation: 0.21
 
   **part 7**
+
+  Graph: email.edgelist.txt
+  - Average clustering coefficient: 0.04
+--------------------------------------------------
+Graph: protein.edgelist.txt
+  - Average clustering coefficient: 0.05
+--------------------------------------------------
+Graph: phonecalls.edgelist.txt
+  - Average clustering coefficient: 0.14
+--------------------------------------------------
