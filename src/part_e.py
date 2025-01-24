@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from scipy.sparse import linalg
+import scipy.sparse
 
 def compute_eigenspectrum(adj_matrix, k=100):
     """
@@ -10,16 +10,16 @@ def compute_eigenspectrum(adj_matrix, k=100):
     - spectral_gap: difference between the largest and second-largest eigenvalues
     """
     # Convert adjacency matrix to sparse format
-    adj_matrix = sp.csc_matrix(adj_matrix)
+    adj_matrix = scipy.sparse.csc_matrix(adj_matrix)
     n = adj_matrix.shape[0]
 
     if k >= n - 1:
         # For small graphs, use dense eigenvalue computation
-        eigenvalues = np.linalg.eigvals(adj_matrix.toarray())
+        eigenvalues = scipy.sparse.linalg.eigs(adj_matrix.toarray(), k=k, which='LM', return_eigenvectors=False)
         eigenvalues = np.sort(np.real(eigenvalues))[::-1]
     else:
         # For large graphs, compute the top k eigenvalues using sparse computation
-        eigenvalues = linalg.eigs(adj_matrix, k=k, which='LM', return_eigenvectors=False)
+        eigenvalues = scipy.sparse.linalg.eigs(adj_matrix, k=k, which='LM', return_eigenvectors=False)
         eigenvalues = np.sort(np.real(eigenvalues))[::-1]
 
     # Compute spectral gap (difference between largest and second-largest eigenvalues)
