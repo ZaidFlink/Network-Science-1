@@ -2,6 +2,8 @@ results from basic_graph_properties.py:
 
 **Results**
 
+**part 1**
+
 (venv) venvsaifalami@saifs-MacBook-Pro Network-Science-1 % python secondaryProject/analysis/basic_graph_properties.py
 Graph: email.edgelist.txt
   - Number of nodes: 57194
@@ -20,3 +22,16 @@ Graph: phonecalls.edgelist.txt
   - Number of edges: 56853
   - Number of connected components: 2463
   - Size of the largest connected component: 30420
+
+**part 2**
+
+Graph: email.edgelist.txt
+  - Power-law slope: -1.44
+--------------------------------------------------
+Graph: protein.edgelist.txt
+  - Power-law slope: -1.80
+--------------------------------------------------
+Graph: phonecalls.edgelist.txt
+  - Power-law slope: -3.15
+
+**part 3**
