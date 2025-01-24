@@ -48,3 +48,19 @@ Graph: phonecalls.edgelist.txt
   - Average shortest path length: 10.08
 --------------------------------------------------
 
+
+**part 4**
+
+
+Graph: email.edgelist.txt
+  - Average clustering coefficient: 0.03
+--------------------------------------------------
+Graph: protein.edgelist.txt
+  - Average clustering coefficient: 0.05
+--------------------------------------------------
+Graph: phonecalls.edgelist.txt
+  - Average clustering coefficient: 0.13
+--------------------------------------------------
+
+
+**part 5**
